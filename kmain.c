@@ -1,20 +1,17 @@
- #include "frame_buffer.h"
-    #include "serial_port.h"
-    #include "io.h"
-    #include "memory_seg.h"
-    #include "interrupts.h"
-    #include "keyboard.h"
-    #include "pic.h"
+/* The C function */
+
+#include "frame_buffer.h"
+#include "serial_port.h"
+#include "memory_seg.h"
+
     
+    int main(){
 
-    void kmain()
-    {
-
-       //char arr[] = "Welcome supuni";
-       //fb_move_cursor(6*80);
-       //fb_write(arr, 14);
-       //serial_write(arr, 14);
-       segments_install_gdt();
-       interrupts_install_idt();
-
+           char ptr2[] = "Hello Issiwara Kavinda ";
+   
+    
+    serial_write(0x3F8, ptr2, 14);
+    fb_write(ptr2, 14);
+    segments_install_gdt();
+    
     }
