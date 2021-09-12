@@ -3,7 +3,6 @@
 #include "io.h"
 #include "serial_port.h"
 #include "keyboard.h"
-
 #define INTERRUPTS_DESCRIPTOR_COUNT 256 
 #define INTERRUPTS_KEYBOARD 33 
 #define INTERRUPTS_PAGING 14 
